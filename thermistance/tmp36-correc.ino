@@ -9,7 +9,7 @@ Serial.begin(9600) ;//la vitesse de communication avec le port série est fixée
 void loop(){
 float valeurAnaTMP36 = analogRead(A0) ;//la valeur ue par le CAN A0 est placée dans une variable
 float tensionA0 = valeurAnaTMP36*5.0/1024 ;
-temperature = (tensionA0-0.5)*100;
+float temperature = (tensionA0-0.5)*100;
 
 // on affiche la température
 Serial.println(temperature) ;
