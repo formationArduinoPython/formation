@@ -6,6 +6,7 @@
  * (on pourra rajouter un affichage de Requiv par exemple)
  */
 
+const float Ualim = 5.0 ; 
 const int R0 = 1000 ; 
 const int Rlim = 115 ; // valeur minimale pour infusion
 const int LEDR = 3 ; 
@@ -21,9 +22,10 @@ void setup()
 
 void loop()
 	{
-    // acquisition de Réquivalente
-    float valeurAnaRequiv = analogRead(A2) ; 
-    float Requiv = R0 * valeurAnaRequiv/(1024.0-valeurAnaRequiv) ;
+	// acquisition de Réquivalente
+    float valeurAnaUequiv = analogRead(A2) ;
+	float Uequiv = valeurAnaUequiv*Ualim/1023.0 ; 
+	float Requiv = R0*Uequiv/(Ualim-Uequiv) ;
 
 	if (Requiv <= Rlim)// T >= 70 : alarme rouge
 		{

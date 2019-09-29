@@ -1,9 +1,10 @@
 /* 
  * ce programme va permettre de lire température et Réquivalente 
- * sur moniteur série en continu
+ * sur moniteur série toutes les 5 secondes
  */
 
-int R0 = 1000 ; 
+const float Ualim = 5.0 ; 
+const int R0 = 1000 ; 
 float temperature = 100.0 ;// initialisation d'une variable pour démarrer acquisition (cf loop)
 
 void setup()
@@ -11,6 +12,7 @@ void setup()
   pinMode(A0, INPUT) ;// A0 pour TMP36
   pinMode(A2, INPUT) ; // A2 pour div de tension CTN
   Serial.begin(9600) ;// vitesse de communication
+  Serial.println("T;Requiv");
   }
 
 
@@ -20,12 +22,13 @@ void loop()
     {
     // acquisition de la température
     float valeurAnaTMP36 = analogRead(A0) ;// 
-    float tensionA0 = valeurAnaTMP36*5.0/1024 ;
+    float tensionA0 = valeurAnaTMP36*Ualim/1023 ;
     temperature = (tensionA0-0.5)*100;
 
     // acquisition de Réquivalente
-    float valeurAnaRequiv = analogRead(A2) ; 
-    float Requiv = R0 * valeurAnaRequiv/(1024.0-valeurAnaRequiv) ;
+    float valeurAnaUequiv = analogRead(A2) ;
+	float Uequiv = valeurAnaUequiv*Ualim/1023.0 ; 
+	float Requiv = R0*Uequiv/(Ualim-Uequiv) ;
 
     // on affiche le couple température ; Requiv
     Serial.print(temperature) ; Serial.print(";") ; Serial.println(Requiv) ; 

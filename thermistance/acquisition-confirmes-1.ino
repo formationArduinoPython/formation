@@ -11,7 +11,6 @@ void setup()
 	pinMode(A0, INPUT) ;// A0 pour TMP36
 	pinMode(A2, INPUT) ; // A2 pour div de tension CTN
 	Serial.begin(9600) ;// vitesse de communication
-	Serial.println("T;Requiv");
 	}
 
 

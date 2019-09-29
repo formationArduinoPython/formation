@@ -1,6 +1,10 @@
 import serial
 
-port_serie = serial.Serial("/dev/ttyACM0", 9600)
+# pensez à entrer le nom de votre port série ci-dessous
+# ce nom peut se trouver en bas à droite de l'IDE Arduino
+port_serie = serial.Serial(port="nom_du_port_serie", baudrate=9600)
+
+
 
 file = open("donnees2.csv", "w")
 file.write("température;Réquivalente")

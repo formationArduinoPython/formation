@@ -1,5 +1,7 @@
 // ce programme va permettre de lire la température sur le moniteur série
 
+const float Ualim = 5.0 ; // tension d'alimentation du capteur
+
 void setup(){
 pinMode(A0, INPUT) ;//
 Serial.begin(9600) ;//
