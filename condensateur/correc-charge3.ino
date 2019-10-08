@@ -29,6 +29,5 @@ void loop()
         charge = charge*100.0/1023.0 ; 
         Serial.print(temps) ; Serial.print(";") ; Serial.println(charge) ;    
         }
-     Serial.read() ;//on vide le buffer
     }
 }
