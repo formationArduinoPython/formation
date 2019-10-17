@@ -4,7 +4,7 @@
  * on envoie la tension aux bornes de la photorésistance sur l'entrée 7
  */
 
-const int alarme = 3 ; 
+const int alarme = 12 ; 
 const int photo = 7 ; 
 boolean etat ; 
 
