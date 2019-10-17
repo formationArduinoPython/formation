@@ -1,6 +1,6 @@
 /*
  * un buzzer (alarme sonore) ou une LED (alarme lumineuse) est relié sur la sortie numérique 12
- * on reprend le montage du pont diviseur de l'activité précédente ; la résistance en série avec photoR est de 4600 ohms environ
+ * on reprend le montage du pont diviseur de l'activité précédente ; la résistance en série avec photoR est de 4700 ohms environ
  * on envoie la tension aux bornes de la photorésistance sur l'entrée 7
  */
 
