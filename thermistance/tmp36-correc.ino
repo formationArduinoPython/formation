@@ -1,6 +1,6 @@
 // ce programme va permettre de lire la température sur le moniteur série
 
-const float Ualim = 5.0 ; // tension d'alimentation du capteur
+const float Ualim = 5.0 ; // tension d'alimentation du capteur à modifier le cas échéant
 
 void setup(){
 pinMode(A0, INPUT) ;//la broche analogique A0 est une entrée
