@@ -34,12 +34,11 @@ while True:
             # affichage
             print(temperature,";",Requiv)
 
-            # écriture dans fichier
-            f.write('{};{}\n'.format(temperature, Requiv))
-            
-            # implémentation des listes
-            temperature_liste.append(temperature)
-            Requiv_liste.append(Requiv)
+            # écriture dans fichier et listes toutes les 3 acquisitions
+            if compteur % 3 == 0 : 
+                f.write('{};{}\n'.format(temperature, Requiv))
+                temperature_liste.append(temperature)
+                Requiv_liste.append(Requiv)
             
             # temporisation
             sleep(1000)

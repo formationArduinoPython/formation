@@ -21,7 +21,8 @@ while t > 30 :
     file.write(t)
     file.write(";")
     file.write(r)
-    file.write("\n")
+    # déjà un retour à la ligne dans le serial.println
+    #file.write("\n") # donc cette ligne inutile
     t=float(t);r=float(r)
     print(t,end='');print(';',end='');print(r)
     
