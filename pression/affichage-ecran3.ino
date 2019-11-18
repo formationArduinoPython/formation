@@ -1,7 +1,6 @@
 //MXP5500DP Capteur de pression 
 // calcul et affichage de la pression moyenne
-#include <Wire.h>
-#include "rgb_lcd.h"
+#include <rgb_lcd.h>
 
 rgb_lcd lcd;
 const float patm=101.3;// on définit la pression atmosphérique, valeur connue
