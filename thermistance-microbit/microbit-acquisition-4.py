@@ -4,6 +4,7 @@ R0 = 1000
 Ualim = 3.13
 temperature = 100
 temperature_liste, Requiv_liste = [], []
+compteur = 0
 
 file = open("donnees2.csv", "w")
 file.write("T;Requiv\n")
@@ -13,7 +14,9 @@ print("#T;Requiv")
 while True:
     if button_a.is_pressed():
         while temperature > 30 :
-            for n in range(20) : 
+            sommeTemperatures = 0
+            sommeRequiv = 0
+            for n in range(20) :
                 # acquisition température
                 valeurAnaTMP36 = pin0.read_analog()
                 tensionA0 = valeurAnaTMP36*Ualim/1023
@@ -31,12 +34,13 @@ while True:
             temperature = sommeTemperatures/20
             Requiv = sommeRequiv/20
             
-            # affichage
+            # affichage, incrémentation du compteur de nbe d'affichages
             print(temperature,";",Requiv)
+            compteur+=1
 
             # écriture dans fichier et listes toutes les 3 acquisitions
             if compteur % 3 == 0 : 
-                f.write('{};{}\n'.format(temperature, Requiv))
+                file.write('{};{}\n'.format(temperature, Requiv))
                 temperature_liste.append(temperature)
                 Requiv_liste.append(Requiv)
             
