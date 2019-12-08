@@ -1,0 +1,12 @@
+from microbit import *
+
+# on initialise la liaison uart via USB (tx et rx à rien)
+uart.init(baudrate=115200, bits=8, parity=None, stop=1, tx=None, rx=None)
+
+while True : 
+    if button_a.is_pressed(): 
+        t0 = running_time()
+        while True:  # boucle de l'acquisition ; c'est le fichier Python qui décide combien de temps elle va durer
+            t = running_time()-t0
+            ana = pin0.read_analog()
+            print(t, ';', ana)
