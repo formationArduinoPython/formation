@@ -1,7 +1,7 @@
 /*
  * acquisitions pdt 300ms dès qu'on reçoit une donnée du port série
  * attention à ce que le temps d'acquisition python soit plus court que celui arduino (sinon il reste bloqué sur port série)
- * avec ce programme, on relancera une acquisition par reset sur carte puis F5 sur fichier python
+ * avec ce programme, on relancera une acquisition par reset sur carte puis compilation du fichier python
 */
 unsigned long temps ; 
 float charge ; 

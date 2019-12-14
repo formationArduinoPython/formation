@@ -22,7 +22,7 @@ void loop()
 		unsigned long t0 = micros() ; // date initiale
 		//À COMPLÉTER : démarrage de la charge
       
-		while (micros()-t0 <= temps_acquisition_Arduino)// on limite à 300ms (tau=22ms)
+		while (micros()-t0 <= temps_acquisition_Arduino)// on limite à 300ms (tau=27ms)
 			{
 			temps = micros()-t0 ; //calcul de l'instant t
 			// À COMPLÉTER : charge = valeur analogique lue sur A0
