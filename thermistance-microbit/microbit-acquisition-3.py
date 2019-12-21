@@ -5,7 +5,7 @@ print('bouton A : debut des mesures    bouton B : fin')
 temperature = 100
 Ualim = 3.13
 R0 = 1000
-
+n = 0 # un compteur pour enregistrement dans fichier
 while True:
     if button_a.is_pressed():
         with open('data.csv', "w") as f:
@@ -28,9 +28,11 @@ while True:
                 """
                 print(temperature,";",Requiv)
                 """
-                écriture dans fichier
+                écriture dans fichier toutes les 3 mesures
                 """
-                f.write('{};{}\n'.format(temperature, Requiv))
+                if n%3 == 0 : 
+                    f.write('{};{}\n'.format(temperature, Requiv))
+                n+=1
                 """
                 temporisation
                 """

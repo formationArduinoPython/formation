@@ -23,10 +23,6 @@ while True:
             # affichage
             print(temperature,";",Requiv)
             
-            # implémentation des listes
-            temperature_liste.append(temperature)
-            Requiv_liste.append(Requiv)
-            
             # temporisation
             sleep(5000)
             
@@ -34,7 +30,3 @@ while True:
             if button_b.is_pressed():
                 print("stop")
                 break
-        
-        # affichage des listes
-        print('temperature_liste = ',temperature_liste)
-        print('Requiv_liste = ',Requiv_liste)
