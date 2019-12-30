@@ -28,6 +28,12 @@ plt.plot(T, Requiv, "b+", label = "points expérimentaux")
 #####################
 plt.plot(T, Requiv_modele, "r--", label = "modèle expérimental : Requiv = {a}*T+{b}".format(a = round(a,2), b = round(b,0)))
 
+############
+# écart-type
+############
+ecarttype=np.std(Requiv-Requiv_modele, ddof=1)
+print('écart-type', ecarttype)
+
 ######################
 # axes, titre, légende
 ######################

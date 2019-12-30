@@ -30,7 +30,7 @@ while True:
                 """
                 écriture dans fichier toutes les 3 mesures
                 """
-                if n%3 == 0 : 
+                if n % 3 == 0: 
                     f.write('{};{}\n'.format(temperature, Requiv))
                 n+=1
                 """
