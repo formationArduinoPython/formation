@@ -27,4 +27,4 @@ while t > 30 :
     print(t,end='');print(';',end='');print(r)
     
 file.close()
-
+port_serie.close()
