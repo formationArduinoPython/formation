@@ -22,7 +22,7 @@ while True:
             file.write("\n")
             
     if button_b.is_pressed(): 
-        pin8.write_digital(1)
+        pin8.write_digital(0)
         sleep(1000)
         file.close()
         break
