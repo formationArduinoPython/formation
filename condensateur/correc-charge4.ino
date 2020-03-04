@@ -27,7 +27,8 @@ void loop()
       temps = micros()-t0 ; 
       charge = analogRead(A0)*100.0/1023.0 ;
       Serial.print(temps) ; Serial.print(";") ; Serial.println(charge) ;    
+	Serial.read() ;//on vide le buffer
+
       }
-    Serial.read() ;//on vide le buffer
     }
   }

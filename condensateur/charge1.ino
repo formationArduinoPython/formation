@@ -28,7 +28,8 @@ void loop()
 			// À COMPLÉTER : charge = valeur analogique lue sur A0
 			// À COMPLÉTER : charge exprimée en % du maximum (1023)
 			//À COMPLÉTER : affichage données "temps;charge"    
+			Serial.read() ;//on vide le buffer
+
 			}
-		Serial.read() ;//on vide le buffer
 		}
 	}

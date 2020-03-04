@@ -29,7 +29,8 @@ void loop()
 			charge = analogRead(A0) ; // À COMPLÉTER : charge = valeur analogique lue sur A0
 			charge = charge*100.0/1023.0 ; // À COMPLÉTER : charge exprimée en % du maximum (1023)
 			Serial.print(temps) ; Serial.print(";") ; Serial.println(charge) ;//À COMPLÉTER : affichage données "temps;charge"    
+			Serial.read() ;//on vide le buffer
+
 			}
-		Serial.read() ;//on vide le buffer
 		}
 	}
